@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-dev.2] - 2026-01-07
+
+### Added
+- `TimeControlPanelOverlay` widget for slide-out panel integration
+  - Animated slide-in/out from right edge
+  - Dark overlay with tap to dismiss
+  - Drag gestures with velocity-based snapping
+  - Persistent toggle button
+  - Production safety (hidden when clockRate == 1)
+- Comprehensive example app demonstrating all package features
+- GitHub Actions CI/CD workflows for automated publishing
+
+### Fixed
+- Font family path for package resolution in consuming apps
+- Removed SnackBar from reset button to avoid ScaffoldMessenger dependency
+
+### Changed
+- Updated README with TimeControlPanelOverlay documentation
+
 ## [1.0.0-dev.1] - 2026-01-06
 
 ### Added
