@@ -115,10 +115,10 @@ void main() {
   group('Color Constants', () {
     test('dark colors are defined', () {
       // Assert
-      expect(kDarkBackground, const Color(0xFF1A1A2E));
-      expect(kDarkBackgroundSecondary, const Color(0xFF252540));
-      expect(kDarkBackgroundHover, const Color(0xFF2D2D4A));
-      expect(kDarkBorder, const Color(0xFF3D3D5C));
+      expect(kDarkBackground, const Color(0xFF0A0A0B));
+      expect(kDarkBackgroundSecondary, const Color(0xFF111113));
+      expect(kDarkBackgroundHover, const Color(0xFF1A1A1E));
+      expect(kDarkBorder, const Color(0x1F22C55E));
       expect(kDarkAccent, const Color(0xFF4ADE80));
       expect(kDarkTextPrimary, const Color(0xFFFFFFFF));
     });
@@ -135,7 +135,7 @@ void main() {
 
     test('shared constants are correct', () {
       // Assert
-      expect(kDefaultTimeFontFamily, 'monospace');
+      expect(kDefaultTimeFontFamily, 'Space Mono');
       expect(kDefaultButtonRadius, 10.0);
       expect(kDefaultBadgeRadius, 10.0);
     });
