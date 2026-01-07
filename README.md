@@ -34,7 +34,7 @@ Add `virtual_clock` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  virtual_clock: ^1.0.0
+  virtual_clock: ^1.0.0-dev.1
 ```
 
 Then run:
@@ -426,7 +426,7 @@ TimeControlPanel(
 - Tomorrow button
 - Date/time picker
 - Pause/Resume button
-- Reset button with confirmation snackbar
+- Reset button
 
 ### Theming
 
@@ -443,6 +443,48 @@ TimeControlTheme(
   accentColor: Color(0xFF4ADE80),
   textPrimary: Colors.white,
   buttonRadius: 12.0,
+)
+```
+
+## TimeControlPanelOverlay Widget
+
+A slide-out panel wrapper that provides global time control anywhere in your app:
+
+### Basic Usage
+
+Wrap your entire app with the overlay for global access:
+
+```dart
+TimeControlPanelOverlay(
+  child: MaterialApp(
+    home: MyHomeScreen(),
+  ),
+)
+```
+
+### Features
+
+- **Slide-out Panel**: Animated slide-in/out from right edge
+- **Dark Overlay**: Semi-transparent background when open (tap to dismiss)
+- **Drag Gestures**: Swipe left/right with velocity-based snapping
+- **Toggle Button**: Persistent button attached to panel edge
+- **Production Safety**: Hidden in release mode unless `forceShow: true`
+
+### Customization
+
+```dart
+TimeControlPanelOverlay(
+  child: MyApp(),
+  clockService: myClockService,  // Optional, uses global clock by default
+  panelWidth: 200,  // Width of the slide-out panel
+  theme: TimeControlTheme(...),  // Panel theming
+  themeMode: TimeControlThemeMode.dark,
+  forceShow: true,  // Show even when clockRate == 1
+  overlayColor: Colors.black54,  // Dark overlay color
+  buttonBuilder: (context, {required isOpen}) {
+    // Custom toggle button
+    return Icon(isOpen ? Icons.close : Icons.menu);
+  },
 )
 ```
 
