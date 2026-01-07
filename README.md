@@ -1,6 +1,6 @@
 # Virtual Clock
 
-A Flutter package for virtual time manipulation and acceleration. Perfect for testing time-based features like streaks, daily bonuses, and scheduled events without waiting in real-time.
+A Flutter package for virtual time manipulation and acceleration. Perfect for testing time-based features like streaks, daily bonuses, and other scheduled events without waiting in real-time.
 
 [![pub package](https://img.shields.io/pub/v/virtual_clock.svg)](https://pub.dev/packages/virtual_clock)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -34,7 +34,7 @@ Add `virtual_clock` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  virtual_clock: ^1.0.0-dev.1
+  virtual_clock: ^1.0.0-dev.3
 ```
 
 Then run:
